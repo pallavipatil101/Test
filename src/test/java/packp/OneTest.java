@@ -6,8 +6,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.apache.logging.log4j.LogManager;
+//import org.openqa.selenium.chrome.ChromeOptions;
+//import org.apache.logging.log4j.LogManager;
 
 public class OneTest implements ILogger{
 	WebDriver driver;
@@ -18,9 +18,9 @@ public class OneTest implements ILogger{
   @BeforeClass
   public void openBrowser() {
 	    System.setProperty("webdriver.chrome.driver\"", "/home/josh/eclipse-workspace/SeleniumDemo/Resources/chromedriver.exe");
-	  ChromeOptions options = new ChromeOptions();
-	options.setExperimentalOption("useAutomationExtension", false);
-		driver = new ChromeDriver(options);
+	  //ChromeOptions options = new ChromeOptions();
+	//options.setExperimentalOption("useAutomationExtension", false);
+		driver = new ChromeDriver();
 		driver.get("http://qatechhub.com");
 		driver.manage().window().maximize();
   }  
@@ -29,10 +29,10 @@ public class OneTest implements ILogger{
   public void testOne() {
 	  String acttitle = driver.getTitle();
 	  if(acttitle.equalsIgnoreCase("QA Automation Tools Trainings and Tutorials | QA Tech Hub")){
-		 LOG.info("PASS");
+		  System.out.println("PASS");
 	  }
 	  else {
-		  LOG.info("FAIL");
+		  System.out.println("FAIL");
 	  }
   }
   
