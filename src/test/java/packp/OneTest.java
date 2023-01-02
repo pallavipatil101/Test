@@ -18,16 +18,14 @@ public class OneTest implements ILogger{
   
   @BeforeTest
   public void openBrowser() {
-	    System.setProperty("webdriver.chrome.driver\"", "/home/josh/eclipse-workspace/SeleniumDemo/Resources/chromedriver.exe");
-	  //ChromeOptions options = new ChromeOptions();
-	  		  System.out.println("1 pass");
-
-	//options.setExperimentalOption("useAutomationExtension", false);
+	    String path = System.getProperty("user.dir");
+	    System.out.println(path+"/Drivers/chromedriver.exe");
+	    System.setProperty("webdriver.chrome.driver\"", path+"/Drivers/chromedriver.exe");
 		driver = new ChromeDriver();
-	  		  System.out.println("2 PASS");
+	  		
 
 		driver.get("http://qatechhub.com");
-	  		  System.out.println("3 PASS");
+	  		 
 
 		driver.manage().window().maximize();
 	  		  System.out.println("4 PASS");
