@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.apache.logging.log4j.LogManager;
 
-public class OneTest {
+public class OneTest implements ILogger{
 	WebDriver driver;
-	Logger log = LogManager.getLogger(Demo.class.getName());
+	
 	
   
   
@@ -29,10 +29,10 @@ public class OneTest {
   public void testOne() {
 	  String acttitle = driver.getTitle();
 	  if(acttitle.equalsIgnoreCase("QA Automation Tools Trainings and Tutorials | QA Tech Hub")){
-		 log.info("PASS");
+		 LOG.info("PASS");
 	  }
 	  else {
-		  log.info("FAIL");
+		  LOG.info("FAIL");
 	  }
   }
   
