@@ -15,7 +15,9 @@ public class OneTest {
   @BeforeClass
   public void openBrowser() {
 	    System.setProperty("webdriver.chrome.driver\"", "/home/josh/eclipse-workspace/SeleniumDemo/Resources/chromedriver.exe");
-		driver = new ChromeDriver();
+	  ChromeOptions options = new ChromeOptions();
+	options.setExperimentalOption("useAutomationExtension", false);
+		driver = new ChromeDriver(options);
 		driver.get("http://qatechhub.com");
 		driver.manage().window().maximize();
   }  
