@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 //import org.openqa.selenium.chrome.ChromeOptions;
 //import org.apache.logging.log4j.LogManager;
@@ -15,7 +16,7 @@ public class OneTest implements ILogger{
 	
   
   
-  @BeforeClass
+  @BeforeTest
   public void openBrowser() {
 	    System.setProperty("webdriver.chrome.driver\"", "/home/josh/eclipse-workspace/SeleniumDemo/Resources/chromedriver.exe");
 	  //ChromeOptions options = new ChromeOptions();
