@@ -7,9 +7,11 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.apache.logging.log4j.LogManager;
 
 public class OneTest {
 	WebDriver driver;
+	Logger log = LogManager.getLogger(Demo.class.getName());
 	
   
   
@@ -27,10 +29,10 @@ public class OneTest {
   public void testOne() {
 	  String acttitle = driver.getTitle();
 	  if(acttitle.equalsIgnoreCase("QA Automation Tools Trainings and Tutorials | QA Tech Hub")){
-		  System.out.println("PASS");
+		 log.info("PASS");
 	  }
 	  else {
-		  System.out.println("FAIL");
+		  log.info("FAIL");
 	  }
   }
   
